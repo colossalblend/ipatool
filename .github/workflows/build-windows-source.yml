@@ -28,7 +28,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           $env:VCPKG_ROOT = "$env:RUNNER_TEMP\vcpkg"
           "VCPKG_ROOT=$env:VCPKG_ROOT" >> $env:GITHUB_ENV
-          & "$env:VCPKG_ROOT\vcpkg.exe" install curl:x64-windows-static nlohmann-json:x64-windows-static minizip:x64-windows-static mbedtls:x64-windows-static unicorn:x64-windows-static
+          & "$env:VCPKG_ROOT\vcpkg.exe" install curl:x64-windows-static nlohmann-json:x64-windows-static mbedtls:x64-windows-static unicorn:x64-windows-static
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Configure
